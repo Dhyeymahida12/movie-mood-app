@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <!-- App title top left -->
+        <TextView
+            android:id="@+id/tvAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_padding_horizontal"
+            android:layout_marginTop="24dp"
+            android:text="@string/app_name"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/toolbar_title_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Profile icon -->
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:text="👤"
+            android:textSize="20sp"
+            android:contentDescription="Profile"
+            app:layout_constraintEnd_toStartOf="@id/tvWatchlist"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Watchlist icon -->
+        <TextView
+            android:id="@+id/tvWatchlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:text="🔖"
+            android:textSize="20sp"
+            android:contentDescription="Watchlist"
+            app:layout_constraintEnd_toStartOf="@id/tvSettings"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Settings icon top right -->
+        <TextView
+            android:id="@+id/tvSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/screen_padding_horizontal"
+            android:text="⚙️"
+            android:textSize="20sp"
+            android:contentDescription="@string/cd_settings_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Subtitle text -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:layout_marginStart="@dimen/screen_padding_horizontal"
+            android:layout_marginEnd="@dimen/screen_padding_horizontal"
+            android:gravity="center"
+            android:text="@string/home_subtitle"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- "Or choose your mood:" label -->
+        <TextView
+            android:id="@+id/tvChooseMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/home_choose_mood"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtitle" />
+
+        <!-- Row 1: Action + Comedy -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnActionMood"
+            style="@style/Widget.MovieMood.MoodChip"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/chip_height"
+            android:layout_marginStart="@dimen/screen_padding_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/mood_action"
+            app:layout_constraintEnd_toStartOf="@id/btnComedyMood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvChooseMood" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnComedyMood"
+            style="@style/Widget.MovieMood.MoodChip"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/chip_height"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/screen_padding_horizontal"
+            android:text="@string/mood_comedy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnActionMood"
+            app:layout_constraintTop_toBottomOf="@id/tvChooseMood" />
+
+        <!-- Row 2: Thriller + Romance -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnThrillerMood"
+            style="@style/Widget.MovieMood.MoodChip"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/chip_height"
+            android:layout_marginStart="@dimen/screen_padding_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/mood_thriller"
+            app:layout_constraintEnd_toStartOf="@id/btnRomanceMood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnActionMood" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRomanceMood"
+            style="@style/Widget.MovieMood.MoodChip"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/chip_height"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/screen_padding_horizontal"
+            android:text="@string/mood_romance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnThrillerMood"
+            app:layout_constraintTop_toBottomOf="@id/btnComedyMood" />
+
+        <!-- Row 3: Horror + Sci-Fi -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHorrorMood"
+            style="@style/Widget.MovieMood.MoodChip"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/chip_height"
+            android:layout_marginStart="@dimen/screen_padding_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/mood_horror"
+            app:layout_constraintEnd_toStartOf="@id/btnSciFiMood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnThrillerMood" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSciFiMood"
+            style="@style/Widget.MovieMood.MoodChip"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/chip_height"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/screen_padding_horizontal"
+            android:text="@string/mood_scifi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnHorrorMood"
+            app:layout_constraintTop_toBottomOf="@id/btnRomanceMood" />
+
+        <!-- Row 4: Drama + Classic -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDramaMood"
+            style="@style/Widget.MovieMood.MoodChip"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/chip_height"
+            android:layout_marginStart="@dimen/screen_padding_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/mood_drama"
+            app:layout_constraintEnd_toStartOf="@id/btnClassicMood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnHorrorMood" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClassicMood"
+            style="@style/Widget.MovieMood.MoodChip"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/chip_height"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/screen_padding_horizontal"
+            android:text="@string/mood_classic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnDramaMood"
+            app:layout_constraintTop_toBottomOf="@id/btnSciFiMood" />
+
+        <!-- Mood text input box -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMoodInput"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginStart="@dimen/screen_padding_horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="@dimen/screen_padding_horizontal"
+            app:cardBackgroundColor="@color/colorSurfaceInput"
+            app:cardCornerRadius="@dimen/input_corner_radius"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnDramaMood">
+
+            <EditText
+                android:id="@+id/etMoodInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="@string/home_input_hint"
+                android:inputType="textMultiLine"
+                android:paddingHorizontal="@dimen/input_padding_horizontal"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="@dimen/text_body" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Discover button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDiscover"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/screen_padding_horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="@dimen/screen_padding_horizontal"
+            android:text="@string/home_discover_btn"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_button"
+            app:backgroundTint="@color/colorButtonPrimary"
+            app:cornerRadius="@dimen/button_corner_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardMoodInput" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

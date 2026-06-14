@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Backgrounds -->
+    <color name="colorBackground">#FF000000</color>
+    <color name="colorSurface">#FF141626</color>
+    <color name="colorSurfaceCard">#FF292B40</color>
+    <color name="colorSurfaceInput">#FF21265C</color>
+
+    <!-- Brand purple -->
+    <color name="colorPrimary">#FF8520FF</color>
+    <color name="colorSecondary">#FF2A144F</color>
+    <color name="colorPrimaryOverlay">#82852DFF</color>
+
+    <!-- Text -->
+    <color name="colorTextPrimary">#FFFFFFFF</color>
+    <color name="colorTextSecondary">#80FFFFFF</color>
+    <color name="colorTextHint">#4DFFFFFF</color>
+
+    <!-- Buttons -->
+    <color name="colorButtonPrimary">#82852DFF</color>
+    <color name="colorButtonSecondary">#FF2A144F</color>
+
+    <!-- Mood chips -->
+    <color name="colorChipBackground">#FF292B40</color>
+    <color name="colorChipText">#FFFFFFFF</color>
+
+    <!-- Settings Colors (Dark Mode) -->
+    <color name="settings_bg">#000000</color>
+    <color name="settings_card_bg">#1A0A2E</color>
+    <color name="settings_divider">#33FFFFFF</color>
+    <color name="settings_pref_header">#5C7CFF</color>
+</resources>

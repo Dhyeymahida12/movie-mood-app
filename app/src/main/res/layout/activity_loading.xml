@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground">
+
+    <!-- Top Bar -->
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="MovieMood"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSettingsIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:text="⚙️"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Main Content -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="Discovery in\nprogress..."
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAppName" />
+
+    <TextView
+        android:id="@+id/tvMoodSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="48dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="For your mood: touching and moving romance"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <!-- Central Brain Icon with glow effect -->
+    <FrameLayout
+        android:id="@+id/flBrainContainer"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/brain_glow_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMoodSubtitle">
+
+        <!-- Sparkles (1-10) -->
+        <TextView android:id="@+id/tvSparkle1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|start" android:layout_marginStart="60dp" android:layout_marginTop="60dp" android:text="✨" android:textSize="20sp" android:alpha="0" />
+        <TextView android:id="@+id/tvSparkle2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom|end" android:layout_marginEnd="60dp" android:layout_marginBottom="60dp" android:text="✨" android:textSize="16sp" android:alpha="0" />
+        <TextView android:id="@+id/tvSparkle3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|end" android:layout_marginTop="80dp" android:layout_marginEnd="50dp" android:text="✨" android:textSize="18sp" android:alpha="0" />
+        <TextView android:id="@+id/tvSparkle4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom|start" android:layout_marginStart="55dp" android:layout_marginBottom="70dp" android:text="✨" android:textSize="22sp" android:alpha="0" />
+        <TextView android:id="@+id/tvSparkle5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal|bottom" android:layout_marginBottom="45dp" android:text="✨" android:textSize="14sp" android:alpha="0" />
+        <TextView android:id="@+id/tvSparkle6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_vertical|end" android:layout_marginEnd="40dp" android:text="✨" android:textSize="19sp" android:alpha="0" />
+        <TextView android:id="@+id/tvSparkle7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_vertical|start" android:layout_marginStart="40dp" android:text="✨" android:textSize="17sp" android:alpha="0" />
+        <TextView android:id="@+id/tvSparkle8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal|top" android:layout_marginTop="45dp" android:text="✨" android:textSize="21sp" android:alpha="0" />
+        <TextView android:id="@+id/tvSparkle9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|start" android:layout_marginStart="100dp" android:layout_marginTop="40dp" android:text="✨" android:textSize="15sp" android:alpha="0" />
+        <TextView android:id="@+id/tvSparkle10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom|end" android:layout_marginEnd="100dp" android:layout_marginBottom="40dp" android:text="✨" android:textSize="18sp" android:alpha="0" />
+
+        <TextView
+            android:id="@+id/tvBrainEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="🧠"
+            android:textSize="80sp" />
+    </FrameLayout>
+
+    <!-- Progress Section -->
+    <TextView
+        android:id="@+id/tvProgressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="Progress"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/pbDiscovery"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProgressPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="0%"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/pbDiscovery"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pbDiscovery"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="120dp"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:progress="13" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pbDiscovery">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💭"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Analyzing your mood..."
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

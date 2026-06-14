@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App name -->
+    <string name="app_name">MovieMood</string>
+
+    <!-- Home screen -->
+    <string name="home_subtitle">Describe your mood and discover the perfect movie</string>
+    <string name="home_choose_mood">Or choose your mood:</string>
+    <string name="home_input_hint">Describe your mood or desire…</string>
+    <string name="home_discover_btn">🔍 Discover</string>
+
+    <!-- Mood chips -->
+    <string name="mood_action">🎬 EPIC ACTION</string>
+    <string name="mood_comedy">😂 Comedy</string>
+    <string name="mood_thriller">🔥 Thriller</string>
+    <string name="mood_romance">💕 Romance</string>
+    <string name="mood_horror">👻 Horror</string>
+    <string name="mood_scifi">🚀 Sci-Fi</string>
+    <string name="mood_drama">🎭 Drama</string>
+    <string name="mood_classic">🌟 Classic</string>
+
+    <!-- Movie detail screen -->
+    <string name="recommended_movies">🎥 Recommended Movies…</string>
+    <string name="add_to_watchlist">Add to watchlist</string>
+    <string name="view_more">View more.</string>
+
+    <!-- Watchlist screen -->
+    <string name="watchlist_title">📍 Watchlist</string>
+
+    <!-- Login screen -->
+    <string name="login_title">Log in</string>
+    <string name="login_email_label">Your email</string>
+    <string name="login_email_hint">Enter your email</string>
+    <string name="login_password_label">Your password</string>
+    <string name="login_password_hint">••••••••••</string>
+    <string name="login_confirm_password_label">Confirm password</string>
+    <string name="signup_btn">Sign up</string>
+
+    <!-- Settings screen -->
+    <string name="settings_title">⚙️ App settings</string>
+    <string name="settings_clear_data">Clear stored data</string>
+    <string name="settings_dark_mode">Dark mode</string>
+
+    <!-- Accessibility content descriptions -->
+    <string name="cd_settings_icon">Open settings</string>
+    <string name="cd_movie_poster">Movie poster</string>
+    <string name="cd_back">Go back</string>
+
+    <string-array name="movie_categories">
+        <item>Action</item>
+        <item>Comedy</item>
+        <item>Thriller</item>
+        <item>Romance</item>
+        <item>Horror</item>
+        <item>Sci-Fi</item>
+        <item>Drama</item>
+        <item>Classic</item>
+        <item>Web Series</item>
+    </string-array>
+
+</resources>

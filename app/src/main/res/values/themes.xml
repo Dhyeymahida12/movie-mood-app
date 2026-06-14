@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main app theme — DayNight for automatic switching -->
+    <style name="Theme.MovieMood" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorSecondary</item>
+        <item name="colorOnPrimary">@color/colorTextPrimary</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorTextPrimary</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:statusBarColor">@color/colorBackground</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
+        <!-- Light status bar (dark icons) for light mode -->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Mood chip button style -->
+    <style name="Widget.MovieMood.MoodChip" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/chip_height</item>
+        <item name="android:backgroundTint">@color/colorChipBackground</item>
+        <item name="android:textColor">@color/colorChipText</item>
+        <item name="android:textSize">@dimen/text_chip</item>
+        <item name="android:gravity">center</item>
+        <item name="cornerRadius">@dimen/chip_corner_radius</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <!-- Primary button style -->
+    <style name="Widget.MovieMood.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:backgroundTint">@color/colorButtonPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_button</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <!-- Secondary button style -->
+    <style name="Widget.MovieMood.Button.Secondary" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/colorButtonSecondary</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="cornerRadius">@dimen/button_secondary_corner_radius</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="RoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+    </style>
+
+    <style name="Widget.App.MoviePoster" parent="">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="shapeAppearanceOverlay">@style/RoundedImageView</item>
+    </style>
+
+</resources>

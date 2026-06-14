@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:name=".MovieMoodApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/finallogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/finallogo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MovieMood">
+
+        <!-- Splash screen — opens FIRST when app launches -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login screen -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <!-- Home screen — mood picker -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+
+        <!-- Loading screen -->
+        <activity
+            android:name=".LoadingActivity"
+            android:exported="false" />
+
+        <!-- Movie detail screen -->
+        <activity
+            android:name=".MovieDetailActivity"
+            android:exported="false" />
+
+        <!-- Movie list screen (View More) -->
+        <activity
+            android:name=".MovieListActivity"
+            android:exported="false" />
+
+        <!-- Watchlist screen -->
+        <activity
+            android:name=".WatchlistActivity"
+            android:exported="false" />
+
+        <!-- Profile screen -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+
+        <!-- Settings screen -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+
+        <!-- Admin screen -->
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false"
+            android:label="Admin Panel" />
+
+        <!-- Manage Movies screen -->
+        <activity
+            android:name=".ManageMoviesActivity"
+            android:exported="false"
+            android:label="Manage Movies" />
+
+    </application>
+
+</manifest>
